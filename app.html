@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+    <title>Loan Shark: A Coding Project</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <!-- font awesome link (coder foundry's) -->
+    <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
+
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="icon" type="image/png" href="img/ah (1) - Copy.png">
+
+</head>
+
+<body class="d-flex flex-column h-100">
+
+    <nav class="navbar navbar-expand-md fixed-top navbarBG navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="/img/ah (1) - Copy.png" height="75" class="d-inline-block align-text-center">
+                Loan Shark
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page">The App</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="code.html">The Code</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank"
+                            href="https://distracted-meitner-e31e0e.netlify.app">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-shrink-0">
+        <div class="container mt-1">
+
+            <div class="row">
+                <div class="col-md-6 p-5">
+                    <h1>Loan Calculator</h1>
+                    <form class="row loanForm">
+                        <div class="col-12">
+                            <label for="loanAmount" class="form-label mt-3 mb-0">Loan Amount:</label>
+                            <input id="loanAmount" type="number" class="form-control" placeholder="Loan Amt" value="0"
+                                min="0" step="25">
+                        </div>
+                        <div class="col">
+                            <label for="numOfPaymts" class="form-label mb-0">Payments:</label>
+                            <input type="number" id="numOfPaymts" name="numOfPaymts" class="form-control" value="0"
+                                min="0" max="360" step="12">
+                        </div>
+                        <div class="col-12">
+                            <label for="rate" class="form-label mb-0">Rate:</label>
+                            <input type="number" id="rate" name="rate" class="form-control" value="0" min="0"
+                                step="0.005">
+                        </div>
+                        <div class="col-12 pt-3 d-flex justify-content-end">
+                            <button id="btnSubmit" type="button"
+                                class="btn btn-outline-info btn-large">Calculate</button>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="col-md-6 d-flex justify-content-center totalsDiv">
+
+                    <div class="col totalsDiv">
+                        <div id="paymentTitle" class="d-flex justify-content-center">
+                            <p>
+                                <h4>Your Monthly Payments</h4>
+                            </p>
+                        </div>
+                        <p id="payment">
+
+                        </p>
+                        <div class="row row-cols-2">
+                            <div class="col">
+                                <label class="text-left">Total Principcal</label>
+                            </div>
+                            <div class="col text-right" id="totalPrincipal">
+
+                            </div>
+                            <div class="col text-left">
+                                <label>Total Interest</label><br>
+                            </div>
+                            <div class="col text-right" id="totalInterest">
+
+                            </div>
+                            <div class="col text-left">
+                                <label>Total Cost</label>
+                            </div>
+                            <div class="col text-right" id="totalCost">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="row mt-4">
+                <div class="col">
+                    <div class="table-responsive">
+                        <table class="table table-striped" id="paymtData">
+                            <thead class="myTableHdr">
+                                <tr>
+                                    <th>Month</th>
+                                    <th>Payment</th>
+                                    <th>Principal</th>
+                                    <th>Interest</th>
+                                    <th>Total Interest</th>
+                                    <th>Balance</th>
+                                </tr>
+                            </thead>
+                            <tbody id="paymtBody">
+                                <!--Data goes here-->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <template id="pymtemplate">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </template>
+
+        </div>
+    </main>
+
+
+    <footer class="footer mt-auto py-3">
+        <div class="container-fluid">
+            <div class="row row-cols-1 row-cols-lg-3 gy-2">
+                <div class="col d-flex justify-content-center justify-content-lg-start order-last order-lg-first">
+                    <div>
+                        <span>&copy;2022</span><span> Anthony Hansen | tony@example.com</a></span>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center myFooterCenter">
+                  Anthony Hansen
+                </div>
+                <div class="col d-flex justify-content-center justify-content-lg-end">
+                    <div class="row">
+                        <div class="col social">
+                            <a href="#">
+                                <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="col social">
+                            <a href="#">
+                                <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="col social">
+                            <a href="#">
+                                <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+
+
+<template>
+
+
+</template>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+</script>
+
+<!-- sweet alert js -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+<!-- Custom Javascript...put your functions in site.js -->
+<script src="/js/site.js"></script>
+
+<script>
+    // look in this document and find an element called btnSubmit and add a listener
+    document.getElementById("btnSubmit").addEventListener("click", buildPymtSched);
+</script>
+
+
+
+</html>

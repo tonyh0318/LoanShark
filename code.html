@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+    <title>Loan Shark: A Coding Project</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <!-- font awesome link (coder foundry's) -->
+    <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
+
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="icon" type="image/png" href="img/favicon-32x32.png">
+    <link rel="stylesheet" href="/css/prism.css">
+
+</head>
+
+<body class="d-flex flex-column h-100">
+
+    <nav class="navbar navbar-expand-md fixed-top navbarBG navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="/img/MspectreMark.svg" height="24" class="d-inline-block align-text-top">
+                Loan Shark
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="app.html">The App</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page">The Code</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank"
+                            href="https://distracted-meitner-e31e0e.netlify.app">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="content" class="flex-shrink-0">
+        <div class="container">
+            <h2 class="border-1 border-bottom border-dark">The Code</h2>
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <pre class="line-numbers"><code class="language-js">
+                        function getMessage(){
+                            let userMessage = document.getElementById("message").value;
+
+                            Swal.fire(
+                                'The Internet?',
+                                'That thing is still around?',
+                                'question'
+                            )
+
+                            console.log(userMessage);
+                        }</code>
+                    </pre>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <p>The code is structured in one function. It accesses the user's input and displays a Sweet Alert
+                        function</p>
+                    <h5>getMessage</h5>
+                    <p>Prints the user's inputted message</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer mt-auto py-3 sticky-footer">
+        <div class="container-fluid">
+            <!-- mobile make it 1 column (stack it on tope of each other)...for large make it 3 cols -->
+            <div class="row row-cols-1 rows-cols-lg-3 gy-2">
+                <div class="col order-last order-lg-first">
+                    <div>
+                        <!-- using two spans in case we want to style them differently -->
+                        <span class="text-muted">&copy;2022</span><span> Anthony Hansen | tonyh1977@gmail.com</span>
+                    </div>
+                </div>
+                <div class="col d-flex align-items-center justify-content-start justify-content-lg-center">
+                    <img src="/img/MarkSpectre_WhtLogo.svg" alt="anthony hansen logo" height="24">
+                </div>
+                <div class="col d-flex align-items-center justify-content-start justify-content-lg-end">
+                    <div class="row">
+                        <div class="col social">
+                            <a href="#">
+                                <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="col social">
+                            <a href="#">
+                                <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="col social">
+                            <a href="#">
+                                <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="col social">
+                            <a href="#">
+                                <i class="fab fa-youtube fa-2x" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+</script>
+
+<script src="/js/prism.js"></script>
+
+
+
+</html>

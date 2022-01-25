@@ -1,0 +1,127 @@
+:root {
+    --ah-dark-color: #212121;
+    --ah-light-color: #eeeeee;
+    --ah-primary-color: #001e43;
+    --ah-secondary-color: #ff993b;
+    --ah-navBar-color: #004aad;
+    --ah-footer-color: #004aad;
+}
+
+.loanForm{
+    background-color: rgb(243, 234, 234);
+}
+
+main>.container {
+    padding: 60px 15px 0;
+    margin-bottom: 5rem;
+    min-height: 90vh;
+}
+
+.totalsDiv{
+    font-size: 1.5rem;
+    font-style: italic;
+    padding-top: 3rem;
+    padding-left: 0rem;
+    margin-left: 0rem;
+}
+
+.myTableHdr{
+    background-color: #001e43;
+    color: #eeeeee;
+}
+
+/* nav bar styles */
+.navbarBG {
+    background-color: var(--ah-navBar-color);
+}
+
+.jsicon {
+    color: #e2d304;
+}
+
+.bsicon {
+    color: #800080;
+}
+
+.htmlicon {
+    color: #ff4500;
+}
+
+.cssicon {
+    color: #0b52d6;
+}
+
+.checklisticon {
+    color: var(--ah-secondary-color);
+}
+
+/* can overide an actual bootstrap class btn-outline-primary already 
+exists, but we'll override it here */
+.btn-outline-primary {
+    color: var(--ah-dark-color);
+    border-color: var(--ah-secondary-color) !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:active,
+.btn-outline-primary:focus {
+    border-color: var(--ah-orimary-color) !important;
+    background-color: var(--ah-secondary-color);
+}
+
+.btn-primary {
+    color: white !important;
+    background-color: var(--ah-secondary-color) !important;
+    border-color: var(--ah-secondary-color);
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+    filter: brightness(1.1) !important;
+    border-color: var(--ah-secondary-color);
+}
+
+/* Footer Styles */
+.footer {
+    background-color: var(--ah-footer-color);
+    padding-right: 1rem;
+    color: var(--ah-light-color);
+}
+
+.myFooterLeft{
+    font-size: 0.75rem;
+    padding-left: 0;
+    margin-top: auto;
+    padding: auto;
+}
+
+.myFooterCenter {
+    font-size: 1.75rem;
+    padding-left: 0;
+    margin-top: auto;
+    font-weight: bold;
+}
+.myFooterRight {
+    font-size: 0.75rem;
+    padding-left: 0;
+    margin-top: auto;
+}
+
+.sticky-footer {
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .social>a {
+    color: var(--ah-light-color);
+    opacity: .75;
+}
+
+footer .social>a:hover {
+    color: var(--ah-secondary-color);
+    opacity: .90;
+}
